@@ -1,0 +1,9 @@
+pandas
+numpy
+scipy
+openpyxl
+xlrd==1.2.0
+PyQt5
+matplotlib
+
+pillow

@@ -1,0 +1,30 @@
+# Python and environments
+__pycache__/
+*.py[cod]
+.venv/
+venv/
+.pytest_cache/
+# Build outputs
+build/
+dist/
+*.spec
+*.exe
+*.dll
+# User data and local settings
+user_models.json
+user_models.json.tmp
+.env
+.env.*
+*.pem
+*.key
+*.p12
+*.pfx
+*.log
+*.xlsx
+*.xls
+*.csv
+# Local editor files
+.vscode/
+.idea/
+Thumbs.db
+.DS_Store

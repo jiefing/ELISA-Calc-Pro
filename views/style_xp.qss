@@ -1,0 +1,130 @@
+/* =====================================================================
+   Windows XP 经典 3D 立体质朴风格样式表 (views/style_xp.qss)
+   ELISA-Calc-Pro
+   ===================================================================== */
+
+/* 全局默认底色及文字字体 */
+QWidget {
+    background-color: #ffffff;
+    color: #000000;
+    font-family: "MS Sans Serif", "Microsoft YaHei", sans-serif;
+    font-size: 9pt;
+}
+
+/* Windows 经典灰色立体凸出 outset 按钮 */
+QPushButton {
+    background-color: #e1e1e1;
+    color: #000000;
+    border: 1px outset;
+    border-color: #ffffff #808080 #808080 #ffffff;
+    padding: 4px 10px;
+    min-height: 16px;
+}
+QPushButton:pressed {
+    border: 1px inset;
+    border-color: #808080 #ffffff #ffffff #808080;
+    background-color: #d5d5d5;
+}
+QPushButton:disabled {
+    color: #808080;
+    background-color: #f0f0f0;
+    border-color: #d0d0d0;
+}
+
+/* Windows 凹陷雕刻立体输入框 */
+QLineEdit {
+    background-color: #ffffff;
+    color: #000000;
+    border: 2px inset;
+    border-color: #808080 #ffffff #ffffff #808080;
+    padding: 2px 4px;
+}
+
+/* 分组框 3D 凹陷边框及深蓝标题 */
+QGroupBox {
+    color: #000080;
+    border: 2px inset;
+    border-color: #808080 #ffffff #ffffff #808080;
+    margin-top: 10px;
+    font-weight: bold;
+}
+QGroupBox::title {
+    subcontrol-origin: margin;
+    left: 10px;
+    padding: 0 4px;
+}
+
+/* 下拉菜单 */
+QComboBox {
+    background-color: #ffffff;
+    color: #000000;
+    border: 2px inset;
+    border-color: #808080 #ffffff #ffffff #808080;
+    padding: 2px 18px 2px 3px;
+    min-height: 18px;
+}
+QComboBox::drop-down {
+    subcontrol-origin: padding;
+    subcontrol-position: top right;
+    width: 16px;
+    border-left-width: 1px;
+    border-left-color: #808080;
+    border-left-style: solid;
+    background-color: #e1e1e1;
+}
+
+/* 表格控件 */
+QTableWidget {
+    background-color: #ffffff;
+    gridline-color: #d0d0d0;
+    border: 2px inset;
+    border-color: #808080 #ffffff #ffffff #808080;
+}
+QTableWidget::item {
+    padding: 1px;
+}
+/* 被选中的格点，强制显示为经典的 Windows 经典深蓝 */
+QTableWidget::item:selected {
+    background-color: #000080;
+    color: #ffffff;
+}
+
+/* 表头 3D 浮雕 outset 段 */
+QHeaderView::section {
+    background-color: #e1e1e1;
+    color: #000000;
+    border: 1px outset;
+    border-color: #ffffff #808080 #808080 #ffffff;
+    padding: 4px;
+    font-weight: bold;
+}
+
+/* 滚动条 */
+QScrollBar:vertical {
+    background-color: #f0f0f0;
+    width: 16px;
+    border: 1px solid #d0d0d0;
+    margin: 17px 0 17px 0;
+}
+QScrollBar::handle:vertical {
+    background-color: #e1e1e1;
+    min-height: 20px;
+    border: 1px outset;
+    border-color: #ffffff #808080 #808080 #ffffff;
+}
+QScrollBar::add-line:vertical {
+    background-color: #e1e1e1;
+    height: 16px;
+    subcontrol-position: bottom;
+    subcontrol-origin: margin;
+    border: 1px outset;
+    border-color: #ffffff #808080 #808080 #ffffff;
+}
+QScrollBar::sub-line:vertical {
+    background-color: #e1e1e1;
+    height: 16px;
+    subcontrol-position: top;
+    subcontrol-origin: margin;
+    border: 1px outset;
+    border-color: #ffffff #808080 #808080 #ffffff;
+}
