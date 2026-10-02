@@ -10,7 +10,11 @@
 - 复孔处理、空白扣除、稀释倍数设置和曲线展示。
 - 样本结果 CSV/XLSX、完整 Excel 报告、TXT 和图像导出。
 
-## 安装与运行
+## Windows 免安装版
+
+从 [GitHub Releases](https://github.com/jiefing/ELISA-Calc-Pro/releases) 下载 Windows x64 ZIP，完整解压后运行 `ELISA-Calc-Pro.exe`。请保留同目录的 `_internal` 文件夹，不要只复制 EXE。包内不需要另行安装 Python。
+
+## 源码安装与运行
 
 主要面向 Windows。建议创建独立环境（示例为 Python 3.12）：
 
@@ -43,7 +47,9 @@ py -3.12 -m venv .venv
 .venv\Scripts\python.exe build_pack.py
 ```
 
-构建脚本使用当前解释器，在 `dist/ELISA-Calc-Pro/` 生成文件夹形式的 Windows 程序，不自动结束运行中的程序，也不清空整个 dist 目录。首次公开仅发布源码，不提供旧版本 EXE。
+构建脚本使用当前解释器，在 `dist/ELISA-Calc-Pro/` 生成文件夹形式的 Windows 程序，不自动结束运行中的程序，也不清空整个 dist 目录。发布包使用此处脱敏源码构建，不沿用历史 EXE。
+
+发布构建使用 Python 3.12 x64，建议把构建虚拟环境放在纯英文路径，避免 Qt 5 插件路径识别问题。复现本次依赖环境可安装 `requirements-release.txt`，构建后运行 `python package_release.py` 生成 ZIP 和 SHA-256 校验文件。
 
 ## 代码结构
 

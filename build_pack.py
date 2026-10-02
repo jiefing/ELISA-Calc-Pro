@@ -9,8 +9,8 @@ def main():
     subprocess.run([sys.executable, str(root / "build_icon.py")], cwd=root, check=True)
     subprocess.run([
         sys.executable, "-m", "PyInstaller", "--onedir", "--windowed",
-        "--name=ELISA-Calc-Pro", "--icon=assets/logo.ico",
-        "--add-data=assets;assets", "--hidden-import=openpyxl",
+        "--name=ELISA-Calc-Pro", f"--icon={root / 'assets' / 'logo.ico'}",
+        f"--add-data={root / 'assets'};assets", "--hidden-import=openpyxl",
         "--hidden-import=matplotlib.backends.backend_qt5agg",
         "--distpath=dist", "--workpath=build", "--specpath=build",
         "main.py",
